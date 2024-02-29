@@ -1,0 +1,2 @@
+// JavaScript file name with geeks.js
+print("Welcome to Geeksforgeeks!!! Mr. "+name);

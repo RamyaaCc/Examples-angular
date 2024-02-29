@@ -1,0 +1,4 @@
+var hello = function(){  
+    System.println("Hello Nashorn");  
+};  
+hello();

@@ -1,0 +1,19 @@
+ package features;
+ 
+import javax.script.*;
+import java.io.*;
+
+public class nashron {
+	public static void main(String[] args)
+		throws Exception
+	{
+		ScriptEngine ee
+			= new ScriptEngineManager()
+				.getEngineByName("Nashorn");
+		Bindings bind
+			= ee.getBindings(
+				ScriptContext.ENGINE_SCOPE);
+		bind.put("name", "Bishal Kumar Dubey");
+		ee.eval(new FileReader("geeks.js"));
+	}
+}

@@ -1,0 +1,47 @@
+package features;
+
+
+//A simple Java program to demonstrate multiple
+//inheritance through default methods.
+interface Add
+{
+ // default method
+ default void add()
+ {
+	 int a=10;
+	 int b=20;
+     System.out.println(a+b);
+ }
+}
+
+interface Sub
+{
+ // Default method
+ default void sub()
+ {
+     System.out.println("Default TestInterface2");
+ }
+}
+
+//Implementation class code
+class defInterface implements Add, Sub
+{
+ // Overriding default show method
+ public void show()
+ {
+     // use super keyword to call the show
+     // method of TestInterface1 interface
+     Add.super.add();
+
+     // use super keyword to call the show
+     // method of TestInterface2 interface
+     Sub.super.sub();
+ }
+
+ public static void main(String args[])
+ {
+     TestClass d = new TestClass();
+     d.add();
+     d.add();
+ }
+}
